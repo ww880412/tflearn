@@ -200,7 +200,7 @@ class TermLogger(Callback):
                 print_step = " -- iter: " + ("%0" + str(
                     len(str(data['data_size']))) + "d") % 0 \
                              + "/" + str(data['data_size'])
-            termlogs += "\x1b[2K\r| " + data['name'] + " | epoch: " + \
+            termlogs += "\x1b[2K| " + data['name'] + " | epoch: " + \
                         "%03d" % print_epoch + print_loss + print_acc + \
                         print_val_loss + print_val_acc + print_step + "\n"
 
