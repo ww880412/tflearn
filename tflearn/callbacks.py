@@ -91,7 +91,8 @@ class TermLogger(Callback):
             curses.setupterm()
             sys.stdout.write(curses.tigetstr('civis').decode())
         except Exception:
-            self.has_curses = False
+            #self.has_curses = False
+            self.has_curses = True
         try:
             clear_output
         except NameError:
@@ -214,8 +215,8 @@ class TermLogger(Callback):
             global_acc=training_state.global_acc)
 
         if self.has_ipython and not self.has_curses:
-            pass
-            #clear_output(wait=True)
+            #pass
+            clear_output(wait=True)
         else:
             for i in range(len(self.data) + 1):
                 termlogs += "\033[A"
