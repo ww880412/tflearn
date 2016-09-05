@@ -214,7 +214,8 @@ class TermLogger(Callback):
             global_acc=training_state.global_acc)
 
         if self.has_ipython and not self.has_curses:
-            clear_output(wait=True)
+            pass
+            #clear_output(wait=True)
         else:
             for i in range(len(self.data) + 1):
                 termlogs += "\033[A"
